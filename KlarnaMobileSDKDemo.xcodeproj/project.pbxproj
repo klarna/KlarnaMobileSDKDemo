@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E9D009034483461FBD6F646 /* Pods_KlarnaMobileSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE896D3D620276CED35CB96A /* Pods_KlarnaMobileSDKDemo.framework */; };
+		A45707BA21B7D8DE00AF6949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45707B921B7D8DE00AF6949 /* AppDelegate.swift */; };
+		A45707BC21B7D8DE00AF6949 /* UIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45707BB21B7D8DE00AF6949 /* UIWebViewController.swift */; };
+		A45707BF21B7D8DE00AF6949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45707BD21B7D8DE00AF6949 /* Main.storyboard */; };
+		A45707C121B7D8E000AF6949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45707C021B7D8E000AF6949 /* Assets.xcassets */; };
+		A45707C421B7D8E000AF6949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45707C221B7D8E000AF6949 /* LaunchScreen.storyboard */; };
+		A45707EB21B8007500AF6949 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45707EA21B8007500AF6949 /* WKWebViewController.swift */; };
+		A45707F421B94BEB00AF6949 /* harry.html in Resources */ = {isa = PBXBuildFile; fileRef = A45707F321B94BEB00AF6949 /* harry.html */; };
+		A45707F821B94CF800AF6949 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45707F721B94CF800AF6949 /* Bundle+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7B212936582710EDBF6D7E00 /* Pods-KlarnaMobileSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlarnaMobileSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-KlarnaMobileSDKDemo/Pods-KlarnaMobileSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A45707B621B7D8DE00AF6949 /* KlarnaMobileSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KlarnaMobileSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45707B921B7D8DE00AF6949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A45707BB21B7D8DE00AF6949 /* UIWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebViewController.swift; sourceTree = "<group>"; };
+		A45707BE21B7D8DE00AF6949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A45707C021B7D8E000AF6949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A45707C321B7D8E000AF6949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A45707C521B7D8E000AF6949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A45707EA21B8007500AF6949 /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		A45707F321B94BEB00AF6949 /* harry.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = harry.html; sourceTree = "<group>"; };
+		A45707F721B94CF800AF6949 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		BE896D3D620276CED35CB96A /* Pods_KlarnaMobileSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KlarnaMobileSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C270A49DA6907CFCC3AC733F /* Pods-KlarnaMobileSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlarnaMobileSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KlarnaMobileSDKDemo/Pods-KlarnaMobileSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A45707B321B7D8DE00AF6949 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E9D009034483461FBD6F646 /* Pods_KlarnaMobileSDKDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433CD72103B8D7957F630CBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C270A49DA6907CFCC3AC733F /* Pods-KlarnaMobileSDKDemo.debug.xcconfig */,
+				7B212936582710EDBF6D7E00 /* Pods-KlarnaMobileSDKDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E830FAB532BB18D69C4E466 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE896D3D620276CED35CB96A /* Pods_KlarnaMobileSDKDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A45707AD21B7D8DE00AF6949 = {
+			isa = PBXGroup;
+			children = (
+				A45707B821B7D8DE00AF6949 /* KlarnaMobileSDKDemo */,
+				A45707B721B7D8DE00AF6949 /* Products */,
+				433CD72103B8D7957F630CBD /* Pods */,
+				9E830FAB532BB18D69C4E466 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A45707B721B7D8DE00AF6949 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A45707B621B7D8DE00AF6949 /* KlarnaMobileSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A45707B821B7D8DE00AF6949 /* KlarnaMobileSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A45707EF21B8065500AF6949 /* UIWebView Demo */,
+				A45707F121B8067000AF6949 /* WKWebViewDemo */,
+				A45707F221B81D7300AF6949 /* Extensions */,
+				A45707CB21B7D90600AF6949 /* Supporting files */,
+			);
+			path = KlarnaMobileSDKDemo;
+			sourceTree = "<group>";
+		};
+		A45707CB21B7D90600AF6949 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				A45707F321B94BEB00AF6949 /* harry.html */,
+				A45707B921B7D8DE00AF6949 /* AppDelegate.swift */,
+				A45707BD21B7D8DE00AF6949 /* Main.storyboard */,
+				A45707C021B7D8E000AF6949 /* Assets.xcassets */,
+				A45707C221B7D8E000AF6949 /* LaunchScreen.storyboard */,
+				A45707C521B7D8E000AF6949 /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		A45707EF21B8065500AF6949 /* UIWebView Demo */ = {
+			isa = PBXGroup;
+			children = (
+				A45707BB21B7D8DE00AF6949 /* UIWebViewController.swift */,
+			);
+			path = "UIWebView Demo";
+			sourceTree = "<group>";
+		};
+		A45707F121B8067000AF6949 /* WKWebViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A45707EA21B8007500AF6949 /* WKWebViewController.swift */,
+			);
+			path = WKWebViewDemo;
+			sourceTree = "<group>";
+		};
+		A45707F221B81D7300AF6949 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A45707F721B94CF800AF6949 /* Bundle+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A45707B521B7D8DE00AF6949 /* KlarnaMobileSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A45707C821B7D8E000AF6949 /* Build configuration list for PBXNativeTarget "KlarnaMobileSDKDemo" */;
+			buildPhases = (
+				D99D9819922833E8F0B7B026 /* [CP] Check Pods Manifest.lock */,
+				A45707B221B7D8DE00AF6949 /* Sources */,
+				A45707B321B7D8DE00AF6949 /* Frameworks */,
+				A45707B421B7D8DE00AF6949 /* Resources */,
+				655E4F16B1565CCF36D9EC77 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KlarnaMobileSDKDemo;
+			productName = KlarnaMobileSDKDemo;
+			productReference = A45707B621B7D8DE00AF6949 /* KlarnaMobileSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A45707AE21B7D8DE00AF6949 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				TargetAttributes = {
+					A45707B521B7D8DE00AF6949 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = A45707B121B7D8DE00AF6949 /* Build configuration list for PBXProject "KlarnaMobileSDKDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A45707AD21B7D8DE00AF6949;
+			productRefGroup = A45707B721B7D8DE00AF6949 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A45707B521B7D8DE00AF6949 /* KlarnaMobileSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A45707B421B7D8DE00AF6949 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A45707C421B7D8E000AF6949 /* LaunchScreen.storyboard in Resources */,
+				A45707C121B7D8E000AF6949 /* Assets.xcassets in Resources */,
+				A45707BF21B7D8DE00AF6949 /* Main.storyboard in Resources */,
+				A45707F421B94BEB00AF6949 /* harry.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		655E4F16B1565CCF36D9EC77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KlarnaMobileSDKDemo/Pods-KlarnaMobileSDKDemo-frameworks.sh",
+				"${PODS_ROOT}/KlarnaMobileSDK/ios/KlarnaMobileSDK.framework",
+				"${PODS_ROOT}/KlarnaMobileSDK/ios/KlarnaMobileSDK.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KlarnaMobileSDK.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/KlarnaMobileSDK.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KlarnaMobileSDKDemo/Pods-KlarnaMobileSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D99D9819922833E8F0B7B026 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KlarnaMobileSDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A45707B221B7D8DE00AF6949 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A45707EB21B8007500AF6949 /* WKWebViewController.swift in Sources */,
+				A45707BC21B7D8DE00AF6949 /* UIWebViewController.swift in Sources */,
+				A45707F821B94CF800AF6949 /* Bundle+Extensions.swift in Sources */,
+				A45707BA21B7D8DE00AF6949 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A45707BD21B7D8DE00AF6949 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A45707BE21B7D8DE00AF6949 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A45707C221B7D8E000AF6949 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A45707C321B7D8E000AF6949 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A45707C621B7D8E000AF6949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A45707C721B7D8E000AF6949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A45707C921B7D8E000AF6949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C270A49DA6907CFCC3AC733F /* Pods-KlarnaMobileSDKDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KlarnaMobileSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.KlarnaMobileSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A45707CA21B7D8E000AF6949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B212936582710EDBF6D7E00 /* Pods-KlarnaMobileSDKDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KlarnaMobileSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.KlarnaMobileSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A45707B121B7D8DE00AF6949 /* Build configuration list for PBXProject "KlarnaMobileSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A45707C621B7D8E000AF6949 /* Debug */,
+				A45707C721B7D8E000AF6949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A45707C821B7D8E000AF6949 /* Build configuration list for PBXNativeTarget "KlarnaMobileSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A45707C921B7D8E000AF6949 /* Debug */,
+				A45707CA21B7D8E000AF6949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A45707AE21B7D8DE00AF6949 /* Project object */;
+}

@@ -1,0 +1,16 @@
+PODS:
+  - KlarnaMobileSDK (0.2.0-beta-1)
+
+DEPENDENCIES:
+  - KlarnaMobileSDK (= 0.2.0-beta-1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KlarnaMobileSDK
+
+SPEC CHECKSUMS:
+  KlarnaMobileSDK: 091bd78e00a3b7d89b09e5d52aceed0ec97f475c
+
+PODFILE CHECKSUM: 8dc02b227e4d98ffad4ec140597c4c4a00d6f24e
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script>
+    "use strict";!function(){var r,e,i=function(e,t){this.registeredNatively=!1,this.name=e,this.callback=t},s=function(){var e;return window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.KlarnaNativeHookMessageHandler?e=window.webkit.messageHandlers.KlarnaNativeHookMessageHandler:window.KlarnaNativeHookMessageHandler&&(e=window.KlarnaNativeHookMessageHandler),e};(e=r||(r={})).ReceiverAdded="ReceiverAdded",e.ReceiverRemoved="ReceiverRemoved",e.MessagePosted="MessagePosted";var o=function(e,t,s){this.action=e,this.receiverName=t,this.message=s},t=function(){function e(){this.nativeReady=!1,this.receivers=[],this.queuedMessages=[],this.version="0.0.2"}return e.prototype.addReceiver=function(e,t){var s=new i(e,t);this.nativeReady&&(this.postEventMessageToNative(new o(r.ReceiverAdded,s.name,null)),s.registeredNatively=!0),this.receivers.push(s)},e.prototype.removeReceiver=function(t,s){this.receivers=this.receivers.filter(function(e){return e.name!==t&&e.callback!==s}),this.nativeReady&&this.postEventMessageToNative(new o(r.ReceiverRemoved,t,null))},e.prototype.postMessage=function(e,t){void 0===t&&(t=!1);for(var s=0,i=this.receivers;s<i.length;s++){var a=i[s];a.name!==e.receiver&&"*"!==e.receiver||a.callback(e)}t||(this.nativeReady?this.postEventMessageToNative(new o(r.MessagePosted,null,e)):this.queuedMessages.push(e))},e.prototype.setNativeReady=function(){if(!this.nativeReady){for(var e=0,t=this.receivers.filter(function(e){return!e.registeredNatively});e<t.length;e++){var s=t[e];this.postEventMessageToNative(new o(r.ReceiverAdded,s.name,null)),s.registeredNatively=!0}for(var i=0,a=this.queuedMessages;i<a.length;i++){var n=a[i];this.postEventMessageToNative(new o(r.MessagePosted,null,n))}this.queuedMessages=[],this.nativeReady=!0}},e.inSdkWebView=function(){return null!=s()},e.prototype.postEventMessageToNative=function(e){var t=s();null!=t&&t.postMessage(JSON.stringify(e))},e}();null==window.__KlarnaNativeHook&&(window.__KlarnaNativeHook=new t)}();
+    </script>
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        #buttons {
+            background-color: #eee;
+            box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.3);
+            padding: 10px 10px;
+        }
+
+        #buttons .button {
+            padding: 16px 20px;
+            background: rgba(240, 195, 223, 0.886);
+            box-shadow: 0px 2px 2px rgba(193, 79, 142, 0.592);
+            text-align: center;
+        }
+
+        #buttons .button.system-button {
+            background: rgba(197, 195, 240, 0.886);
+            box-shadow: 0px 2px 2px rgba(79, 79, 193, 0.592);
+        }
+
+        #buttons .button:not(:first-child) {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Harry Test</h1>
+
+    <div id="buttons"></div>
+
+
+
+    <script>
+
+        const componentName = 'HarryTestComponent'
+        const nativeName = 'Native'
+
+        let createMessage = (action, params) => {
+            let message = {
+                'action': action,
+                'sender': componentName,
+                'receiver': nativeName,
+                'messageId': Math.random().toString(36).substring(7),
+                'params': params || {}
+            }
+
+            return message
+        }
+
+        let sendMessage = (msg) => {
+            let nativeHook = window.__KlarnaNativeHook
+            console.log(nativeHook, msg)
+            nativeHook.postMessage(msg)
+        }
+
+        let initialize = () => {
+            let nativeHook = window.__KlarnaNativeHook
+            nativeHook.addReceiver('HarryTestHtml', (msg) => {
+                console.log(msg)
+            })
+
+            sendMessage(createMessage('handshake'))
+        }
+
+        let generateButton = (title, func, isSystem) => {
+            let button = document.createElement('div')
+            button.classList.add('button')
+            button.innerText = title
+            button.addEventListener('click', func)
+
+            if (isSystem) {
+                button.classList.add('system-button')
+            }
+
+            let buttonContainer = document.getElementById('buttons')
+            buttonContainer.appendChild(button)
+        }
+
+        let showSeparateFullscreen = () => {
+            let snippet = "<html><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\" /><style>body {background-color: #fff;}</style></head><body><h1>Test Popup</h1></body></html>"
+            sendMessage(createMessage('fullscreenLoadHtml', { html: snippet, url: 'https://test.html' }))
+            setTimeout(() => {
+                sendMessage(createMessage('fullscreenShow', { initialHeight: '200', placement: 'bottom' }))
+                setTimeout(() => {
+                    sendMessage(createMessage('fullscreenHide'))
+                }, 3000)
+            }, 1000)
+        }
+
+
+        // Buttons
+
+        generateButton('Initialize', () => {
+            initialize()
+        })
+
+        generateButton('Fullscreen Will Show', () => {
+            sendMessage(createMessage('fullscreenReplaceWebView'))
+        })
+
+        generateButton('Fullscreen Did Show', () => {
+            sendMessage(createMessage('fullscreenMoveWebView'))
+        })
+
+        generateButton('Fullscreen Will Hide', () => {
+            sendMessage(createMessage('fullscreenReplaceOverlay'))
+        })
+
+        generateButton('Fullscreen Did Hide', () => {
+            sendMessage(createMessage('fullscreenRestoreWebView'))
+        })
+
+
+        generateButton('Test Popup', () => {
+            showSeparateFullscreen()
+        }, true)
+
+
+    </script>
+</body>
+
+</html>
