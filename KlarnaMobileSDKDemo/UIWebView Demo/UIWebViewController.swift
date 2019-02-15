@@ -12,7 +12,7 @@ class UIWebViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView! {
         didSet {
             webView.delegate = self
-            webView.loadHtmlString(Bundle.harryHtmlString, baseURL: nil)
+            webView.loadHTMLString(Bundle.harryHtmlString, baseURL: nil)
         }
     }
 

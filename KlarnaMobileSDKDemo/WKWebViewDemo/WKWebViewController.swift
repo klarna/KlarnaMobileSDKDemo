@@ -13,7 +13,7 @@ class WKWebViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView! {
         didSet {
             webView.navigationDelegate = self
-            webView.loadHtmlString(Bundle.harryHtmlString, baseURL: nil)
+            webView.loadHTMLString(Bundle.harryHtmlString, baseURL: nil)
         }
     }
 
