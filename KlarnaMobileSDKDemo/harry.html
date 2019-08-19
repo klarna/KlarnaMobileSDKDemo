@@ -3,9 +3,7 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <script>
-    "use strict";!function(){var r,e,i=function(e,t){this.registeredNatively=!1,this.name=e,this.callback=t},s=function(){var e;return window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.KlarnaNativeHookMessageHandler?e=window.webkit.messageHandlers.KlarnaNativeHookMessageHandler:window.KlarnaNativeHookMessageHandler&&(e=window.KlarnaNativeHookMessageHandler),e};(e=r||(r={})).ReceiverAdded="ReceiverAdded",e.ReceiverRemoved="ReceiverRemoved",e.MessagePosted="MessagePosted";var o=function(e,t,s){this.action=e,this.receiverName=t,this.message=s},t=function(){function e(){this.nativeReady=!1,this.receivers=[],this.queuedMessages=[],this.version="0.0.2"}return e.prototype.addReceiver=function(e,t){var s=new i(e,t);this.nativeReady&&(this.postEventMessageToNative(new o(r.ReceiverAdded,s.name,null)),s.registeredNatively=!0),this.receivers.push(s)},e.prototype.removeReceiver=function(t,s){this.receivers=this.receivers.filter(function(e){return e.name!==t&&e.callback!==s}),this.nativeReady&&this.postEventMessageToNative(new o(r.ReceiverRemoved,t,null))},e.prototype.postMessage=function(e,t){void 0===t&&(t=!1);for(var s=0,i=this.receivers;s<i.length;s++){var a=i[s];a.name!==e.receiver&&"*"!==e.receiver||a.callback(e)}t||(this.nativeReady?this.postEventMessageToNative(new o(r.MessagePosted,null,e)):this.queuedMessages.push(e))},e.prototype.setNativeReady=function(){if(!this.nativeReady){for(var e=0,t=this.receivers.filter(function(e){return!e.registeredNatively});e<t.length;e++){var s=t[e];this.postEventMessageToNative(new o(r.ReceiverAdded,s.name,null)),s.registeredNatively=!0}for(var i=0,a=this.queuedMessages;i<a.length;i++){var n=a[i];this.postEventMessageToNative(new o(r.MessagePosted,null,n))}this.queuedMessages=[],this.nativeReady=!0}},e.inSdkWebView=function(){return null!=s()},e.prototype.postEventMessageToNative=function(e){var t=s();null!=t&&t.postMessage(JSON.stringify(e))},e}();null==window.__KlarnaNativeHook&&(window.__KlarnaNativeHook=new t)}();
-    </script>
+    <script src="https://x.klarnacdn.net/mobile-sdk/mobile-js-snippet/v1/app.min.js"></script>
     <style>
         * {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -44,7 +42,7 @@
 </head>
 
 <body>
-    <h1>Harry Test</h1>
+    <h1>HTML Test</h1>
 
     <div id="buttons"></div>
 
@@ -110,28 +108,12 @@
 
         // Buttons
 
-        generateButton('Initialize', () => {
+        generateButton('1. Initialize', () => {
             initialize()
         })
 
-        generateButton('Fullscreen Will Show', () => {
-            sendMessage(createMessage('fullscreenReplaceWebView'))
-        })
 
-        generateButton('Fullscreen Did Show', () => {
-            sendMessage(createMessage('fullscreenMoveWebView'))
-        })
-
-        generateButton('Fullscreen Will Hide', () => {
-            sendMessage(createMessage('fullscreenReplaceOverlay'))
-        })
-
-        generateButton('Fullscreen Did Hide', () => {
-            sendMessage(createMessage('fullscreenRestoreWebView'))
-        })
-
-
-        generateButton('Test Popup', () => {
+        generateButton('2. Test Popup', () => {
             showSeparateFullscreen()
         }, true)
 

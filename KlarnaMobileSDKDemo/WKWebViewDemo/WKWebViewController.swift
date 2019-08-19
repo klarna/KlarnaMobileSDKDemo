@@ -21,9 +21,8 @@ class WKWebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        klarnaHybridSDK = KlarnaHybridSDK(webView: webView,
-                                          returnUrl: URL(string: "your-app-scheme://")!,
-                                          eventListener: self)
+        klarnaHybridSDK = KlarnaHybridSDK(returnUrl: URL(string: "your-app-scheme://")!, eventListener: self)
+        klarnaHybridSDK?.addWebView(webView)
     }
 }
 
@@ -31,7 +30,7 @@ class WKWebViewController: UIViewController {
 extension WKWebViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        klarnaHybridSDK?.newPageWillLoad(in: webView)
+        klarnaHybridSDK?.newPageLoad(in: webView)
     }
 
     func webView(_ webView: WKWebView,
@@ -43,33 +42,29 @@ extension WKWebViewController: WKNavigationDelegate {
 }
 
 // MARK: - KlarnaHybridSDKEventListener
-extension WKWebViewController: KlarnaHybridSDKEventListener {
+extension WKWebViewController: KlarnaHybridEventListener {
 
-    func klarnaHybridSDKWillShowFullscreen(inWebView webView: KlarnaWebView, completion: () -> Void) {
-        // Handle fullscreen transitions
+    func klarnaWillShowFullscreen(inWebView webView: KlarnaWebView, completionHandler: @escaping () -> Void) {
         print("[KlarnaHybridSDK]: will show fullscreen")
-        completion()
+        completionHandler()
     }
-
-    func klarnaHybridSDKDidShowFullscreen(inWebView webView: KlarnaWebView, completion: () -> Void) {
-        // Handle fullscreen transitions
+    
+    func klarnaDidShowFullscreen(inWebView webView: KlarnaWebView, completionHandler: @escaping () -> Void) {
         print("[KlarnaHybridSDK]: did show fullscreen")
-        completion()
+        completionHandler()
     }
-
-    func klarnaHybridSDKWillHideFullscreen(inWebView webView: KlarnaWebView, completion: () -> Void) {
-        // Handle fullscreen transitions
+    
+    func klarnaWillHideFullscreen(inWebView webView: KlarnaWebView, completionHandler: @escaping () -> Void) {
         print("[KlarnaHybridSDK]: will hide fullscreen")
-        completion()
+        completionHandler()
     }
-
-    func klarnaHybridSDKDidHideFullscreen(inWebView webView: KlarnaWebView, completion: () -> Void) {
-        // Handle fullscreen transitions
+    
+    func klarnaDidHideFullscreen(inWebView webView: KlarnaWebView, completionHandler: @escaping () -> Void) {
         print("[KlarnaHybridSDK]: did hide fullscreen")
-        completion()
+        completionHandler()
     }
-
-    func klarnaHybridSDKFailed(inWebView webView: KlarnaWebView, withError error: KlarnaMobileSDKError) {
+    
+    func klarnaFailed(inWebView webView: KlarnaWebView, withError error: KlarnaMobileSDKError) {
         // Handle Klarna hybrid SDK related errors
         print("[KlarnaHybridSDK]: did get error: \(error.debugDescription)")
     }

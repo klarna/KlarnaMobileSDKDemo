@@ -1,5 +1,7 @@
 PODS:
-  - KlarnaMobileSDK (1.0.0)
+  - KlarnaMobileSDK (2.0.3):
+    - KlarnaMobileSDK/xcode102-swift5-fat (= 2.0.3)
+  - KlarnaMobileSDK/xcode102-swift5-fat (2.0.3)
 
 DEPENDENCIES:
   - KlarnaMobileSDK
@@ -9,8 +11,8 @@ SPEC REPOS:
     - KlarnaMobileSDK
 
 SPEC CHECKSUMS:
-  KlarnaMobileSDK: 8a0a2fa3f3093edc7d7f1343140cd0ec6776d849
+  KlarnaMobileSDK: d6a78eaa49e45ff9c9e68508e3e98eace69a636f
 
 PODFILE CHECKSUM: bf2a974bfca1252a3b0b75edb54e648bace90c5e
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.2
